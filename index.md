@@ -71,7 +71,7 @@ Streamlit dashboard for biomedical signal processing and classification.
 
 ## 📄 Resume
 
-📥 [**Download My Resume (PDF)**](./assets/Reem_Aboutaleb_Resume.pdf)
+📥 [**Download My Resume (PDF)**](/assets/Reem_Aboutaleb_Resume.pdf)
 
 ---
 
