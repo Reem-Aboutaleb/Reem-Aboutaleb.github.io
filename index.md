@@ -27,41 +27,45 @@ I hold a Bachelor’s in Biology and am currently pursuing my Master’s in Biom
 
 ## 💼 Projects {#projects}
 
-### 🔬 Neuro-Physio Dashboard  
-A Streamlit-based viewer and classifier for PPG & EEG signals.  
-- **Tech**: Streamlit, Scikit-learn, Matplotlib  
+### 🧠 Multimodal Stress Detection  
+Stress classification using physiological signals (PPG, EDA) and ML models.  
+- **Tech**: Jupyter, Python, NeuroKit2, Scikit-learn  
+🔗 [GitHub Repo](https://github.com/Reem-Aboutaleb/multimodal-stress-detection)  
+
+![Stress Demo](./assets/stress_demo.gif)
+
+---
+
+### 💊 Drug Release Simulation  
+Simulating drug release kinetics for first-order and zero-order models.  
+- **Tech**: Python, Matplotlib, NumPy  
+🔗 [GitHub Repo](https://github.com/Reem-Aboutaleb/Drug_Release_Simulation)
+
+---
+
+### 💓 ECG Signal Analysis  
+Analyzing ECG signals and visualizing heart rate trends.  
+- **Tech**: Python, Jupyter, Matplotlib  
+🔗 [GitHub Repo](https://github.com/Reem-Aboutaleb/ECG_Signal_Analysis)  
+
+![ECG Demo](./assets/ecg_demo.gif)
+
+---
+
+### 📊 EEG Alpha Wave Detector  
+Detecting alpha wave activity (8–13 Hz) from EEG signals.  
+- **Tech**: Python, Jupyter, MNE  
+🔗 [GitHub Repo](https://github.com/Reem-Aboutaleb/eeg-alpha-wave-detector)  
+
+![EEG Demo](./assets/eeg_demo.gif)
+
+---
+
+### 🧪 Neuro-Physio Dashboard  
+Streamlit dashboard for biomedical signal processing and classification.  
+- **Tech**: Python, Streamlit, Pandas  
 🔗 [Live App](https://neuro-physio-dashboard-dkpzskqkcxnbccr94b5gxf.streamlit.app)  
-🔗 [GitHub Repo](https://github.com/Reem-Aboutaleb/neuro-physio-dashboard)  
-
-![Demo](https://github.com/Reem-Aboutaleb/neuro-physio-dashboard/blob/main/images/neuro_physio_full_demo.gif?raw=true)
-
----
-
-### 📊 EEG Alpha Wave Detection  
-Real-time EEG alpha wave detector using MNE and Python.  
-- **Tech**: MNE-Python, NumPy, Colab  
-🔗 [GitHub Repo](https://github.com/Reem-Aboutaleb/eeg-alpha-wave-detection)  
-
----
-
-### 📁 Multimodal Stress Detection  
-Classifying stress using WESAD dataset (PPG + EDA + HRV).  
-- **Tech**: Python, NeuroKit2, Scikit-learn  
-🔗 [GitHub Repo](https://github.com/Reem-Aboutaleb/multimodal-stress-detection)
-
----
-
-### 🍋 Visual Language Models for Food Safety  
-Using GPT-4o, Llava, and Gemini to detect spoilage in food images.  
-- **Tech**: VLMs, Python, Prompt Engineering  
-🔗 [GitHub Repo](https://github.com/Reem-Aboutaleb/Food-Spoilage-VLM)
-
----
-
-### 💊 Microneedle Drug Release Simulation  
-Analyzing and optimizing drug release in coated microneedles.  
-- **Tech**: Python, Matplotlib, Biophysics Modeling  
-🔗 [GitHub Repo](https://github.com/Reem-Aboutaleb/microneedle-drug-release)
+🔗 [GitHub Repo](https://github.com/Reem-Aboutaleb/neuro-physio-dashboard)
 
 ---
 
@@ -75,11 +79,12 @@ Analyzing and optimizing drug release in coated microneedles.
 
 - 📧 **Email**: [Reemwalid222@gmail.com](mailto:Reemwalid222@gmail.com)  
 - 💻 **GitHub**: [@Reem-Aboutaleb](https://github.com/Reem-Aboutaleb)  
-- 🔗 **LinkedIn**: [linkedin.com/in/your-link](https://linkedin.com/in/your-link)
+- 🔗 **LinkedIn**: [linkedin.com/in/reem-aboutaleb-65314225b](https://www.linkedin.com/in/reem-aboutaleb-65314225b)
 
 ---
 
 <p align="center">© 2025 Reem Aboutaleb · Powered by GitHub Pages</p>
+
 
 
 
