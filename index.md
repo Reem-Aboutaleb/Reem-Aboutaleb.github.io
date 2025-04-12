@@ -7,7 +7,6 @@ title: Reem Aboutaleb
 
 # 👩‍🔬 Reem Aboutaleb
 
-Biomedical Engineering Master's Student @ NYU | Signal Processing Enthusiast | ML in Healthcare 💡
 
 
 
