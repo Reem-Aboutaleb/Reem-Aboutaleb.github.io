@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stress Detection | Reem Aboutaleb</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f5faff;
+      color: #2c3e50;
+      padding-bottom: 3em;
+    }
+    nav {
+      background: #007acc;
+      padding: 1em;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1.5em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 3em 2em;
+    }
+    h1 {
+      color: #007acc;
+    }
+    img {
+      max-width: 100%;
+      margin-top: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .button {
+      display: inline-block;
+      margin-top: 2em;
+      background: #007acc;
+      color: white;
+      padding: 0.7em 1.5em;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section>
+    <h1>🧠 Multimodal Stress Detection</h1>
+    <p>
+      This project leverages physiological data from the WESAD dataset to detect stress levels using machine learning. I processed signals from PPG and EDA sensors and extracted HRV features using <strong>NeuroKit2</strong>. I applied both time and frequency domain analysis and trained models like SVM and Random Forest to classify stress vs. baseline states.
+    </p>
+
+    <p>
+      The final model achieved strong performance with cross-validation and was visualized in an interactive dashboard for real-time analysis.
+    </p>
+
+    <img src="assets/stress_demo.gif" alt="Stress Detection Demo">
+
+    <a class="button" href="https://github.com/Reem-Aboutaleb/multimodal-stress-detection" target="_blank">🔗 View GitHub Repo</a>
+  </section>
+
+</body>
+</html>
