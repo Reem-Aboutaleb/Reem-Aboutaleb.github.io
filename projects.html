@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Reem Aboutaleb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stress Detection | Reem Aboutaleb</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #f5faff;
+      background: linear-gradient(to right, #eaf6ff, #f5faff);
       color: #2c3e50;
     }
     nav {
@@ -22,46 +22,55 @@
       text-decoration: none;
       font-weight: bold;
     }
-    h1 {
+    header {
+      background: #d8f1ff;
+      padding: 3em 2em;
       text-align: center;
-      padding: 1.5em 0 0.5em;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
       color: #007acc;
     }
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2em;
-      justify-content: center;
-      padding: 2em;
+    header p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
     }
-    .card {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      width: 300px;
-      padding: 1.5em;
-      text-align: center;
+    .content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 3em 2em;
     }
-    .card img {
+    .content img {
       max-width: 100%;
-      border-radius: 8px;
+      margin-top: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
     }
-    .card h3 {
-      margin: 1em 0 0.3em;
+    .content h2 {
+      margin-top: 2.5em;
+      color: #007acc;
     }
-    .card p {
+    .caption {
       font-size: 14px;
-      color: #555;
+      color: #666;
+      text-align: center;
+      margin-top: 0.3em;
     }
-    .card a {
+    .button {
       display: inline-block;
-      margin-top: 0.8em;
+      margin-top: 2em;
       background: #007acc;
       color: white;
-      padding: 0.5em 1.2em;
+      padding: 0.8em 1.6em;
+      border-radius: 6px;
       text-decoration: none;
-      border-radius: 5px;
       font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background: #005f9e;
     }
   </style>
 </head>
@@ -69,49 +78,41 @@
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="certificates.html">Certificates</a>
+    <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
   </nav>
 
-  <h1>💼 My Projects</h1>
+  <header>
+    <h1>🧠 Multimodal Stress Detection</h1>
+    <p>This project uses physiological data from wearable sensors to classify stress levels using machine learning techniques on PPG and EDA signals.</p>
+  </header>
 
-  <div class="grid">
-    <div class="card">
-      <img src="assets/stress_demo.gif" alt="Stress Detection">
-      <h3>Stress Detection</h3>
-      <p>Classifying stress using PPG, EDA signals and HRV features from the WESAD dataset.</p>
-      <a href="projects/project1.html">View Project</a>
-    </div>
+  <div class="content">
 
-    <div class="card">
-      <img src="assets/ecg_demo.gif" alt="ECG Analysis">
-      <h3>ECG Signal Analysis</h3>
-      <p>Extracting R-R intervals and heart rate variability using Python-based signal processing.</p>
-      <a href="projects/project2.html">View Project</a>
-    </div>
+    <h2>🔬 Project Overview</h2>
+    <p>
+      Using the WESAD dataset, I extracted heart rate variability (HRV) features from PPG and EDA signals and used these to classify stress vs. baseline states. I built a full pipeline for signal cleaning, feature extraction using <strong>NeuroKit2</strong>, model training, and evaluation.
+    </p>
 
-    <div class="card">
-      <img src="assets/eeg_demo.gif" alt="EEG Alpha Detection">
-      <h3>EEG Alpha Wave Detection</h3>
-      <p>Visualizing alpha band (8–13 Hz) brainwave activity using MNE-Python and FFT.</p>
-      <a href="projects/project3.html">View Project</a>
-    </div>
+    <img src="assets/stress_demo.gif" alt="Dashboard Demo">
+    <div class="caption">📊 Streamlit dashboard for stress classification and signal preview</div>
 
-    <div class="card">
-      <img src="assets/release_profiles.png" alt="Drug Release Simulation">
-      <h3>Drug Release Simulation</h3>
-      <p>Simulating zero- and first-order release kinetics for coated microneedle drug delivery.</p>
-      <a href="projects/project4.html">View Project</a>
-    </div>
+    <h2>📈 Feature Importance</h2>
+    <img src="assets/feature_importance_advanced (1).png" alt="Feature Importance Chart">
+    <div class="caption">Top contributing features for stress classification</div>
 
-    <div class="card">
-      <img src="assets/neuro_physio_full_demo.gif" alt="Neuro-Physio Dashboard">
-      <h3>Neuro-Physio Dashboard</h3>
-      <p>Real-time biomedical signal viewer and classifier built with Streamlit.</p>
-      <a href="projects/project5.html">View Project</a>
-    </div>
+    <h2>📉 Confusion Matrix</h2>
+    <img src="assets/confusion_matrix_advanced (1).png" alt="Confusion Matrix">
+    <div class="caption">Model prediction performance on test data</div>
+
+    <h2>📡 Signal Preview</h2>
+    <img src="assets/signal_preview (1).png" alt="Signal Peak Detection">
+    <div class="caption">Peak detection and HRV segment visualization</div>
+
+    <a class="button" href="https://github.com/Reem-Aboutaleb/multimodal-stress-detection" target="_blank">🔗 View on GitHub</a>
+
   </div>
 
 </body>
 </html>
+
