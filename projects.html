@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Reem Aboutaleb</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f5faff;
+      color: #2c3e50;
+    }
+    nav {
+      background: #007acc;
+      padding: 1em;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1.5em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    h1 {
+      text-align: center;
+      padding: 1.5em 0 0.5em;
+      color: #007acc;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+      padding: 2em;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      width: 300px;
+      padding: 1.5em;
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .card h3 {
+      margin: 1em 0 0.3em;
+    }
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 0.8em;
+      background: #007acc;
+      color: white;
+      padding: 0.5em 1.2em;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="certificates.html">Certificates</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h1>💼 My Projects</h1>
+
+  <div class="grid">
+    <div class="card">
+      <img src="assets/stress_demo.gif" alt="Stress Detection">
+      <h3>Stress Detection</h3>
+      <p>Classifying stress using PPG, EDA signals and HRV features from the WESAD dataset.</p>
+      <a href="project1.html">View Project</a>
+    </div>
+
+    <div class="card">
+      <img src="assets/ecg_demo.gif" alt="ECG Analysis">
+      <h3>ECG Signal Analysis</h3>
+      <p>Extracting R-R intervals and heart rate variability using Python-based signal processing.</p>
+      <a href="project2.html">View Project</a>
+    </div>
+
+    <div class="card">
+      <img src="assets/eeg_demo.gif" alt="EEG Alpha Detection">
+      <h3>EEG Alpha Wave Detection</h3>
+      <p>Visualizing alpha band (8–13 Hz) brainwave activity using MNE-Python and FFT.</p>
+      <a href="project3.html">View Project</a>
+    </div>
+
+    <div class="card">
+      <img src="assets/release_profiles.png" alt="Drug Release Simulation">
+      <h3>Drug Release Simulation</h3>
+      <p>Simulating zero- and first-order release kinetics for coated microneedle drug delivery.</p>
+      <a href="project4.html">View Project</a>
+    </div>
+
+    <div class="card">
+      <img src="assets/neuro_physio_full_demo.gif" alt="Neuro-Physio Dashboard">
+      <h3>Neuro-Physio Dashboard</h3>
+      <p>Real-time biomedical signal viewer and classifier built with Streamlit.</p>
+      <a href="project5.html">View Project</a>
+    </div>
+  </div>
+
+</body>
+</html>
