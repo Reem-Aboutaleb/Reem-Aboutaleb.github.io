@@ -8,9 +8,8 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #f5faff;
+      background: linear-gradient(to right, #f0faff, #f8fcff);
       color: #2c3e50;
-      padding-bottom: 3em;
     }
     nav {
       background: #007acc;
@@ -23,29 +22,69 @@
       text-decoration: none;
       font-weight: bold;
     }
-    section {
-      max-width: 900px;
+    header {
+      background: #d8f1ff;
+      padding: 3em 2em;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      color: #007acc;
+    }
+    header p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+      font-style: italic;
+    }
+    .content {
+      max-width: 1000px;
       margin: auto;
       padding: 3em 2em;
     }
-    h1 {
-      color: #007acc;
-    }
-    img {
+    .content img {
       max-width: 100%;
       margin-top: 1.5em;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+    }
+    .content h2 {
+      margin-top: 2.5em;
+      color: #007acc;
+    }
+    .content p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .caption {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      margin-top: 0.3em;
     }
     .button {
       display: inline-block;
       margin-top: 2em;
       background: #007acc;
       color: white;
-      padding: 0.7em 1.5em;
+      padding: 0.8em 1.6em;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background: #005f9e;
+    }
+    .quote {
+      font-style: italic;
+      color: #444;
+      background: #f0fbff;
+      padding: 1em 1.5em;
+      border-left: 5px solid #007acc;
+      margin-top: 1.5em;
+      border-radius: 5px;
     }
   </style>
 </head>
@@ -57,20 +96,33 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section>
+  <header>
     <h1>💓 ECG Signal Analysis</h1>
+    <p>Sometimes, the tiniest electrical signals hold the biggest clues about how our hearts are doing.</p>
+  </header>
+
+  <div class="content">
+
+    <div class="quote">
+      “As someone who loves biology and data, I found ECG signals fascinating — raw voltage from your body turned into meaningful health insights.”
+    </div>
+
+    <h2>💡 Why This Project Matters</h2>
     <p>
-      This project focuses on analyzing electrocardiogram (ECG) signals to extract features like R-R intervals, heart rate, and waveform components. I used Python with <strong>NumPy</strong>, <strong>Pandas</strong>, and <strong>Matplotlib</strong> to clean, segment, and visualize the ECG data.
+      Electrocardiogram (ECG) analysis is foundational to cardiovascular monitoring. With wearable sensors and open-source data, it's now possible to analyze heart activity outside the clinic. I created this project to explore how we can use signal processing to extract features like R-R intervals, detect peaks, and calculate heart rate variability in Python.
     </p>
 
+    <h2>🔬 Project Pipeline</h2>
     <p>
-      Signal processing techniques such as peak detection were applied to identify QRS complexes, followed by heart rate variability analysis. The final visualization offers a clear view of cardiac activity trends across different time windows.
+      This project uses a combination of NumPy, Pandas, and Matplotlib to preprocess and analyze ECG signals. I implemented peak detection algorithms, plotted waveforms, and extracted meaningful cardiac features. The visual outputs help reveal heartbeat timing, interval metrics, and cardiac variability patterns.
     </p>
 
     <img src="assets/ecg_demo.gif" alt="ECG Signal Demo">
+    <div class="caption">📊 Raw ECG signal with detected R-R intervals and waveform overlay</div>
 
-    <a class="button" href="https://github.com/Reem-Aboutaleb/ECG_Signal_Analysis" target="_blank">🔗 View GitHub Repo</a>
-  </section>
+    <a class="button" href="https://github.com/Reem-Aboutaleb/ECG_Signal_Analysis" target="_blank">🔗 View on GitHub</a>
+
+  </div>
 
 </body>
 </html>
