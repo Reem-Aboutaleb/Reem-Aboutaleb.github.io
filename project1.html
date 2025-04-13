@@ -36,6 +36,7 @@
       font-size: 1.2em;
       max-width: 700px;
       margin: 0 auto;
+      font-style: italic;
     }
     .content {
       max-width: 1000px;
@@ -51,6 +52,10 @@
     .content h2 {
       margin-top: 2.5em;
       color: #007acc;
+    }
+    .content p {
+      font-size: 16px;
+      line-height: 1.6;
     }
     .caption {
       font-size: 14px;
@@ -72,6 +77,15 @@
     .button:hover {
       background: #005f9e;
     }
+    .quote {
+      font-style: italic;
+      color: #444;
+      background: #f0fbff;
+      padding: 1em 1.5em;
+      border-left: 5px solid #007acc;
+      margin-top: 1.5em;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
@@ -84,30 +98,39 @@
 
   <header>
     <h1>🧠 Multimodal Stress Detection</h1>
-    <p>This project uses physiological data from wearable sensors to classify stress levels using machine learning techniques on PPG and EDA signals.</p>
+    <p>Using data to understand what stress looks like — because your body tells the story before your mind does.</p>
   </header>
 
   <div class="content">
 
-    <h2>🔬 Project Overview</h2>
+    <div class="quote">
+      “I’ve always been fascinated by how our bodies respond to stress — and how we can use data to decode those signals. This project is my way of combining biology, coding, and empathy.”
+    </div>
+
+    <h2>💡 Why This Project Matters</h2>
     <p>
-      Using the WESAD dataset, I extracted heart rate variability (HRV) features from PPG and EDA signals and used these to classify stress vs. baseline states. I built a full pipeline for signal cleaning, feature extraction using <strong>NeuroKit2</strong>, model training, and evaluation.
+      Mental health often goes unnoticed. What if wearable devices could catch stress in real-time — before burnout, panic, or exhaustion kick in? This project was built to explore that question using PPG and EDA signals from wearable sensors. The idea is simple: our bodies give us clues, we just have to learn how to read them.
+    </p>
+
+    <h2>🔬 How It Works</h2>
+    <p>
+      I used the WESAD dataset to extract heart rate variability (HRV) features from photoplethysmogram (PPG) and electrodermal activity (EDA) signals. With the help of <strong>NeuroKit2</strong>, I built a full signal processing pipeline — cleaning data, detecting peaks, extracting features — then trained machine learning models (Random Forest, SVM) to classify stress vs. baseline.
     </p>
 
     <img src="assets/stress_demo.gif" alt="Dashboard Demo">
-    <div class="caption">📊 Streamlit dashboard for stress classification and signal preview</div>
+    <div class="caption">📊 Streamlit dashboard for stress classification and real-time signal viewing</div>
 
     <h2>📈 Feature Importance</h2>
     <img src="assets/feature_importance_advanced (1).png" alt="Feature Importance Chart">
-    <div class="caption">Top contributing features for stress classification</div>
+    <div class="caption">Top features contributing to accurate stress classification</div>
 
     <h2>📉 Confusion Matrix</h2>
     <img src="assets/confusion_matrix_advanced (1).png" alt="Confusion Matrix">
-    <div class="caption">Model prediction performance on test data</div>
+    <div class="caption">Prediction performance of the trained model on validation data</div>
 
     <h2>📡 Signal Preview</h2>
     <img src="assets/signal_preview (1).png" alt="Signal Peak Detection">
-    <div class="caption">Peak detection and HRV segment visualization</div>
+    <div class="caption">Visualizing raw PPG signal with automatic peak detection overlay</div>
 
     <a class="button" href="https://github.com/Reem-Aboutaleb/multimodal-stress-detection" target="_blank">🔗 View on GitHub</a>
 
@@ -115,4 +138,5 @@
 
 </body>
 </html>
+
 
