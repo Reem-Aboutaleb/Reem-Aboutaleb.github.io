@@ -8,9 +8,8 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #f5faff;
+      background: linear-gradient(to right, #eaf6ff, #f5faff);
       color: #2c3e50;
-      padding-bottom: 3em;
     }
     nav {
       background: #007acc;
@@ -23,29 +22,55 @@
       text-decoration: none;
       font-weight: bold;
     }
-    section {
-      max-width: 900px;
+    header {
+      background: #d8f1ff;
+      padding: 3em 2em;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      color: #007acc;
+    }
+    header p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .content {
+      max-width: 1000px;
       margin: auto;
       padding: 3em 2em;
     }
-    h1 {
-      color: #007acc;
-    }
-    img {
+    .content img {
       max-width: 100%;
       margin-top: 1.5em;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+    }
+    .content h2 {
+      margin-top: 2.5em;
+      color: #007acc;
+    }
+    .caption {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      margin-top: 0.3em;
     }
     .button {
       display: inline-block;
       margin-top: 2em;
       background: #007acc;
       color: white;
-      padding: 0.7em 1.5em;
+      padding: 0.8em 1.6em;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background: #005f9e;
     }
   </style>
 </head>
@@ -57,20 +82,37 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section>
+  <header>
     <h1>🧠 Multimodal Stress Detection</h1>
+    <p>This project uses physiological data from wearable sensors to classify stress levels using machine learning techniques on PPG and EDA signals.</p>
+  </header>
+
+  <div class="content">
+
+    <h2>🔬 Project Overview</h2>
     <p>
-      This project leverages physiological data from the WESAD dataset to detect stress levels using machine learning. I processed signals from PPG and EDA sensors and extracted HRV features using <strong>NeuroKit2</strong>. I applied both time and frequency domain analysis and trained models like SVM and Random Forest to classify stress vs. baseline states.
+      Using the WESAD dataset, I extracted heart rate variability (HRV) features from PPG and EDA signals and used these to classify stress vs. baseline states. I built a full pipeline for signal cleaning, feature extraction using <strong>NeuroKit2</strong>, model training, and evaluation.
     </p>
 
-    <p>
-      The final model achieved strong performance with cross-validation and was visualized in an interactive dashboard for real-time analysis.
-    </p>
+    <img src="assets/stress_demo.gif" alt="Dashboard Demo">
+    <div class="caption">📊 Streamlit dashboard for stress classification and signal preview</div>
 
-    <img src="assets/stress_demo.gif" alt="Stress Detection Demo">
+    <h2>📈 Feature Importance</h2>
+    <img src="assets/feature_importance_advanced (1).png" alt="Feature Importance Chart">
+    <div class="caption">Top contributing features for stress classification</div>
 
-    <a class="button" href="https://github.com/Reem-Aboutaleb/multimodal-stress-detection" target="_blank">🔗 View GitHub Repo</a>
-  </section>
+    <h2>📉 Confusion Matrix</h2>
+    <img src="assets/confusion_matrix_advanced (1).png" alt="Confusion Matrix">
+    <div class="caption">Model prediction performance on test data</div>
+
+    <h2>📡 Signal Preview</h2>
+    <img src="assets/signal_preview (1).png" alt="Signal Peak Detection">
+    <div class="caption">Peak detection and HRV segment visualization</div>
+
+    <a class="button" href="https://github.com/Reem-Aboutaleb/multimodal-stress-detection" target="_blank">🔗 View on GitHub</a>
+
+  </div>
 
 </body>
 </html>
+
