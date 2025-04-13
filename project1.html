@@ -10,7 +10,20 @@
       margin: 0;
       background: linear-gradient(to right, #eaf6ff, #f5faff);
       color: #2c3e50;
+      animation: fadeIn 1s ease-in;
     }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     nav {
       background: #007acc;
       padding: 1em;
@@ -138,5 +151,6 @@
 
 </body>
 </html>
+
 
 
