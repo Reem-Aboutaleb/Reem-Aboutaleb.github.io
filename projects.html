@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Reem Aboutaleb</title>
   <style>
     body {
@@ -24,7 +24,7 @@
     }
     h1 {
       text-align: center;
-      padding: 1.5em 0 0.3em;
+      padding: 2em 1em 0.5em;
       color: #007acc;
     }
     .intro {
@@ -34,7 +34,7 @@
       font-style: italic;
       color: #555;
       font-size: 1.1em;
-      padding: 0 1em 1.5em;
+      padding: 0 1em 2em;
     }
     .grid {
       display: flex;
@@ -45,23 +45,25 @@
     }
     .card {
       background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 14px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
       width: 300px;
-      padding: 1.5em;
+      padding: 1.8em 1.5em;
       text-align: center;
       transition: transform 0.2s ease;
     }
     .card:hover {
       transform: translateY(-6px);
     }
-    .card img {
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.06);
-    }
-    .card h3 {
-      margin: 1em 0 0.3em;
+    .emoji-banner {
+      font-size: 1.3em;
+      padding: 1em;
+      background: #d8f1ff;
+      border-radius: 10px;
+      color: #007acc;
+      font-weight: bold;
+      margin-bottom: 1em;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.04);
     }
     .card p {
       font-size: 14px;
@@ -98,37 +100,32 @@
 
   <div class="grid">
     <div class="card">
-      <img src="assets/stress_demo.gif" alt="Stress Detection">
-      <h3>Stress Detection</h3>
+      <div class="emoji-banner">🧠 Stress Detection</div>
       <p>Classifying stress using PPG + EDA signals and HRV features from the WESAD dataset.</p>
       <a href="project1.html">View Project</a>
     </div>
 
     <div class="card">
-      <img src="assets/ecg_demo.gif" alt="ECG Analysis">
-      <h3>ECG Signal Analysis</h3>
+      <div class="emoji-banner">💓 ECG Signal Analysis</div>
       <p>Analyzing ECG waveforms and visualizing heart rate variability and R-R intervals.</p>
       <a href="project2.html">View Project</a>
     </div>
 
     <div class="card">
-      <img src="assets/eeg_demo.gif" alt="EEG Alpha Detection">
-      <h3>EEG Alpha Wave Detection</h3>
+      <div class="emoji-banner">📊 EEG Alpha Detection</div>
       <p>Detecting alpha wave activity (8–13 Hz) from EEG signals using MNE-Python.</p>
       <a href="project3.html">View Project</a>
     </div>
 
     <div class="card">
-      <img src="assets/release_profiles.png" alt="Drug Release Simulation">
-      <h3>Drug Release Simulation</h3>
+      <div class="emoji-banner">💊 Drug Release Simulation</div>
       <p>Modeling and visualizing zero- and first-order release from drug delivery systems.</p>
       <a href="project4.html">View Project</a>
     </div>
 
     <div class="card">
-      <img src="assets/neuro_physio_full_demo.gif" alt="Neuro-Physio Dashboard">
-      <h3>Neuro-Physio Dashboard</h3>
-      <p>Interactive dashboard for biomedical signal processing and real-time stress detection.</p>
+      <div class="emoji-banner">🧪 Neuro-Physio Dashboard</div>
+      <p>Interactive Streamlit dashboard for biomedical signal viewing and stress classification.</p>
       <a href="project5.html">View Project</a>
     </div>
   </div>
