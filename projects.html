@@ -58,12 +58,18 @@
     .emoji-banner {
       font-size: 1.3em;
       padding: 1em;
-      background: #d8f1ff;
+      background: linear-gradient(to right, #d8f1ff, #eaf6ff);
       border-radius: 10px;
       color: #007acc;
       font-weight: bold;
       margin-bottom: 1em;
-      box-shadow: 0 0 6px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+    }
+    .emoji-banner:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #d1ecff, #f0fbff);
+      box-shadow: 0 0 15px rgba(0, 122, 204, 0.2);
     }
     .card p {
       font-size: 14px;
@@ -78,6 +84,7 @@
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+      transition: background 0.3s ease;
     }
     .card a:hover {
       background: #005f9e;
