@@ -1,41 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects | Reem Aboutaleb</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #f5faff;
-      color: #2c3e50;
+    :root {
+      --bg-color: #f5faff;
+      --card-bg: #ffffff;
+      --text-color: #2c3e50;
+      --nav-bg: #007acc;
+      --emoji-bg: linear-gradient(to right, #d8f1ff, #eaf6ff);
+      --emoji-hover-bg: linear-gradient(to right, #d1ecff, #f0fbff);
+      --button-bg: #007acc;
+      --button-hover-bg: #005f9e;
     }
+
+    [data-theme='dark'] {
+      --bg-color: #0e1117;
+      --card-bg: #1a1d23;
+      --text-color: #e6ecf3;
+      --nav-bg: #232b34;
+      --emoji-bg: linear-gradient(to right, #202b38, #2c3c4a);
+      --emoji-hover-bg: linear-gradient(to right, #2c3c4a, #202b38);
+      --button-bg: #3a85ff;
+      --button-hover-bg: #5aa1ff;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Segoe UI', sans-serif;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
     nav {
-      background: #007acc;
+      background: var(--nav-bg);
       padding: 1em;
       text-align: center;
+      position: relative;
     }
+
     nav a {
       color: white;
       margin: 0 1.5em;
       text-decoration: none;
       font-weight: bold;
     }
+
+    .theme-toggle {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      background: white;
+      border: none;
+      border-radius: 20px;
+      padding: 0.4em 0.9em;
+      font-size: 0.9em;
+      cursor: pointer;
+      color: #007acc;
+      font-weight: bold;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
     h1 {
       text-align: center;
       padding: 2em 1em 0.5em;
-      color: #007acc;
+      color: var(--text-color);
     }
+
     .intro {
       max-width: 700px;
       margin: 0 auto;
       text-align: center;
       font-style: italic;
-      color: #555;
       font-size: 1.1em;
       padding: 0 1em 2em;
     }
+
     .grid {
       display: flex;
       flex-wrap: wrap;
@@ -43,51 +86,78 @@
       justify-content: center;
       padding: 2em;
     }
+
     .card {
-      background: #ffffff;
+      background: var(--card-bg);
       border-radius: 14px;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
       width: 300px;
       padding: 1.8em 1.5em;
       text-align: center;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, background 0.3s ease;
     }
+
     .card:hover {
       transform: translateY(-6px);
     }
+
     .emoji-banner {
       font-size: 1.3em;
       padding: 1em;
-      background: linear-gradient(to right, #d8f1ff, #eaf6ff);
+      background: var(--emoji-bg);
       border-radius: 10px;
-      color: #007acc;
       font-weight: bold;
       margin-bottom: 1em;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
       transition: all 0.3s ease;
     }
+
     .emoji-banner:hover {
       transform: scale(1.05);
-      background: linear-gradient(to right, #d1ecff, #f0fbff);
-      box-shadow: 0 0 15px rgba(0, 122, 204, 0.2);
+      background: var(--emoji-hover-bg);
+      box-shadow: 0 0 15px rgba(0, 122, 204, 0.3);
     }
+
     .card p {
       font-size: 14px;
-      color: #555;
+      opacity: 0.9;
     }
+
     .card a {
       display: inline-block;
       margin-top: 1em;
-      background: #007acc;
+      background: var(--button-bg);
       color: white;
       padding: 0.5em 1.2em;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
-      transition: background 0.3s ease;
+      position: relative;
+      transition: all 0.3s ease;
     }
+
+    .card a::after {
+      content: "✨";
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
     .card a:hover {
-      background: #005f9e;
+      background: var(--button-hover-bg);
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+    }
+
+    .card a:hover::after {
+      opacity: 1;
+      animation: sparkle 1s ease infinite;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(20deg); }
     }
   </style>
 </head>
@@ -98,6 +168,7 @@
     <a href="about.html">About Me</a>
     <a href="certificates.html">Certificates</a>
     <a href="contact.html">Contact</a>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
   </nav>
 
   <h1>💼 My Projects</h1>
@@ -136,6 +207,23 @@
       <a href="project5.html">View Project</a>
     </div>
   </div>
+
+  <script>
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+
+    // Load saved theme on page load
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    });
+  </script>
 
 </body>
 </html>
