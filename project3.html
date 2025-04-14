@@ -8,12 +8,18 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #f5faff;
+      background: linear-gradient(to bottom right, #eef9f1, #f8fcff);
       color: #2c3e50;
-      padding-bottom: 3em;
+      animation: fadeIn 0.6s ease-in;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     nav {
-      background: #007acc;
+      background: #2e7d32;
       padding: 1em;
       text-align: center;
     }
@@ -23,29 +29,91 @@
       text-decoration: none;
       font-weight: bold;
     }
-    section {
-      max-width: 900px;
+
+    header {
+      background: #dfffe3;
+      padding: 3em 2em;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #2e7d32;
+    }
+
+    header p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+      font-style: italic;
+    }
+
+    .content {
+      max-width: 1000px;
       margin: auto;
       padding: 3em 2em;
     }
-    h1 {
-      color: #007acc;
-    }
-    img {
+
+    .content img {
       max-width: 100%;
       margin-top: 1.5em;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
     }
+
+    .content h2 {
+      margin-top: 2.5em;
+      color: #2e7d32;
+    }
+
+    .content p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .caption {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      margin-top: 0.3em;
+    }
+
     .button {
       display: inline-block;
       margin-top: 2em;
-      background: #007acc;
+      background: #2e7d32;
       color: white;
-      padding: 0.7em 1.5em;
+      padding: 0.8em 1.6em;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #276c2c;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #444;
+      background: #f0fbf2;
+      padding: 1em 1.5em;
+      border-left: 5px solid #2e7d32;
+      margin-top: 1.5em;
+      border-radius: 5px;
+    }
+
+    .footer-quote {
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      margin-top: 3em;
+      padding-bottom: 2em;
+    }
+
+    .footer-quote span {
+      font-size: 1.2em;
     }
   </style>
 </head>
@@ -57,20 +125,44 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section>
+  <header>
     <h1>📊 EEG Alpha Wave Detection</h1>
+    <p>Visualizing the subtle rhythms of the brain using signal processing and Python.</p>
+  </header>
+
+  <div class="content">
+
+    <div class="quote">
+      “I was always fascinated by how our brainwaves tell stories — Alpha waves especially. They're linked to calm focus and creativity. This project helped me explore that in real data.”
+    </div>
+
+    <h2>🧠 What Is This Project?</h2>
     <p>
-      In this project, I used <strong>MNE-Python</strong> to process EEG signals and isolate alpha band activity (8–13 Hz), which is associated with relaxed and alert mental states. The raw data was preprocessed, filtered, and segmented to extract clean epochs for spectral analysis.
+      This project explores the detection and visualization of Alpha wave activity (8–13 Hz) from EEG signals. Alpha waves are associated with relaxed, reflective mental states. I used Python and MNE to simulate a workflow where raw EEG data is filtered and plotted to highlight Alpha band activity.
     </p>
 
+    <h2>🔬 How It Works</h2>
     <p>
-      I applied band-pass filtering and FFT-based techniques to visualize power in the alpha frequency range across multiple EEG channels. This analysis is useful for understanding cognitive states and assessing focus, relaxation, or drowsiness in experimental or clinical settings.
+      Using MNE-Python, I loaded EEG signals and applied bandpass filtering to isolate the Alpha range. Then, I extracted data from channel EEG 001, a common electrode placement. The processed signal was plotted to visualize frequency-specific brain activity in a way that mirrors what neuroscientists and clinicians might observe.
     </p>
 
-    <img src="assets/eeg_demo.gif" alt="EEG Alpha Wave Demo">
+    <img src="assets/alpha_wave_plot (1).png" alt="Alpha Wave Plot">
+    <div class="caption">📈 Alpha Band EEG Signal - Channel EEG 001</div>
 
-    <a class="button" href="https://github.com/Reem-Aboutaleb/eeg-alpha-wave-detector" target="_blank">🔗 View GitHub Repo</a>
-  </section>
+    <h2>💡 Why It Matters</h2>
+    <p>
+      Working on this project deepened my understanding of biosignals, frequency-domain filtering, and brain physiology. I learned how signal processing can uncover patterns that are invisible in raw data. In the context of healthcare and neuroscience, this has huge implications — from meditation training and sleep studies to epilepsy research and BCI (brain-computer interface) innovation.
+    </p>
+
+    <a class="button" href="https://github.com/Reem-Aboutaleb/eeg-alpha-wave-detector" target="_blank">🔗 View on GitHub</a>
+
+    <div class="footer-quote">
+      <span>🧠✨</span><br>
+      Built with 💚 + MNE-Python
+    </div>
+
+  </div>
 
 </body>
 </html>
+
