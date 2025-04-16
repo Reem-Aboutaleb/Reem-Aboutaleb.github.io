@@ -8,44 +8,113 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #f5faff;
+      background: linear-gradient(to bottom right, #fff5f7, #f0faff);
       color: #2c3e50;
-      padding-bottom: 3em;
+      animation: fadeIn 0.8s ease-in;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     nav {
-      background: #007acc;
+      background: #bb2649;
       padding: 1em;
       text-align: center;
     }
+
     nav a {
       color: white;
       margin: 0 1.5em;
       text-decoration: none;
       font-weight: bold;
     }
-    section {
-      max-width: 900px;
+
+    header {
+      background: #fff0f3;
+      padding: 3em 2em;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #bb2649;
+    }
+
+    header p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+      font-style: italic;
+    }
+
+    .content {
+      max-width: 1000px;
       margin: auto;
       padding: 3em 2em;
     }
-    h1 {
-      color: #007acc;
-    }
-    img {
+
+    .content img {
       max-width: 100%;
       margin-top: 1.5em;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
     }
+
+    .content h2 {
+      margin-top: 2.5em;
+      color: #bb2649;
+    }
+
+    .content p {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .caption {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      margin-top: 0.5em;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #444;
+      background: #fff7f9;
+      padding: 1em 1.5em;
+      border-left: 5px solid #bb2649;
+      margin-top: 1.5em;
+      border-radius: 5px;
+    }
+
     .button {
       display: inline-block;
       margin-top: 2em;
-      background: #007acc;
+      background: #bb2649;
       color: white;
-      padding: 0.7em 1.5em;
+      padding: 0.8em 1.6em;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #9d1c3c;
+    }
+
+    .footer-quote {
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      margin-top: 3em;
+      padding-bottom: 2em;
+    }
+
+    .footer-quote span {
+      font-size: 1.2em;
     }
   </style>
 </head>
@@ -57,20 +126,50 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section>
+  <header>
     <h1>💊 Drug Release Simulation</h1>
+    <p>Modeling how medicine moves — visualizing zero-order and first-order drug delivery.</p>
+  </header>
+
+  <div class="content">
+
+    <div class="quote">
+      “Medications don’t just work because of what they are — they work because of how they’re delivered. That’s what this project taught me.”
+    </div>
+
+    <h2>🧪 Project Purpose</h2>
     <p>
-      In this project, I simulated and visualized drug release kinetics for both zero-order and first-order release models using Python and Matplotlib. The simulation models the rate at which drugs are released from a coated microneedle over time, offering insights into therapeutic dosage control.
+      I wanted to better understand drug release kinetics — how medication is released from a pill, patch, or injection over time. This simulation compares two common delivery types:
+    </p>
+    <ul>
+      <li><strong>Zero-Order Release</strong>: releases drug at a constant rate.</li>
+      <li><strong>First-Order Release</strong>: rate depends on how much drug is left.</li>
+    </ul>
+    <p>
+      Using these models, biomedical engineers can control dosage, manage pain, and optimize treatment for chronic illnesses.
     </p>
 
+    <h2>📊 Release Curve Visualization</h2>
     <p>
-      I developed clear plots to compare release curves between models and analyzed how parameters like release rate constants and time affect drug delivery performance. This tool can help in optimizing drug delivery systems for transdermal applications.
+      I used Python and Matplotlib to simulate a 100 mg dose over time. The graph below shows how each model behaves. Zero-order gives a flat, steady line. First-order decreases exponentially.
     </p>
 
-    <img src="assets/release_profiles.png" alt="Drug Release Simulation Graph">
+    <img src="assets/release_profiles.png" alt="Drug Release Profiles">
+    <div class="caption">📈 Comparing zero-order and first-order drug release models</div>
 
-    <a class="button" href="https://github.com/Reem-Aboutaleb/Drug_Release_Simulation" target="_blank">🔗 View GitHub Repo</a>
-  </section>
+    <h2>💡 What I Learned</h2>
+    <p>
+      This project gave me a stronger understanding of patient-centered drug design. I learned how controlled release helps reduce side effects and keeps blood levels stable — crucial in pain management, hormone therapy, and cancer treatments. It helped me connect theory with real patient impact.
+    </p>
+
+    <a class="button" href="https://github.com/Reem-Aboutaleb/Drug_Release_Simulation" target="_blank">🔗 View on GitHub</a>
+
+    <div class="footer-quote">
+      <span>💊✨</span><br>
+      Built with care using Python + Matplotlib
+    </div>
+
+  </div>
 
 </body>
 </html>
