@@ -8,44 +8,113 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #f5faff;
+      background: linear-gradient(to bottom right, #f4faff, #e8fff5);
       color: #2c3e50;
-      padding-bottom: 3em;
+      animation: fadeIn 0.6s ease-in;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     nav {
-      background: #007acc;
+      background: #007c7c;
       padding: 1em;
       text-align: center;
     }
+
     nav a {
       color: white;
       margin: 0 1.5em;
       text-decoration: none;
       font-weight: bold;
     }
-    section {
-      max-width: 900px;
+
+    header {
+      background: #d7f4f1;
+      padding: 3em 2em;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #007c7c;
+    }
+
+    header p {
+      font-size: 1.2em;
+      max-width: 750px;
+      margin: 0 auto;
+      font-style: italic;
+    }
+
+    .content {
+      max-width: 1000px;
       margin: auto;
       padding: 3em 2em;
     }
-    h1 {
-      color: #007acc;
-    }
-    img {
+
+    .content img {
       max-width: 100%;
       margin-top: 1.5em;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 14px rgba(0, 0, 0, 0.08);
     }
+
+    .content h2 {
+      margin-top: 2.5em;
+      color: #007c7c;
+    }
+
+    .content p {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .caption {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      margin-top: 0.4em;
+    }
+
     .button {
       display: inline-block;
       margin-top: 2em;
-      background: #007acc;
+      background: #007c7c;
       color: white;
-      padding: 0.7em 1.5em;
+      padding: 0.8em 1.6em;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #005c5c;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #444;
+      background: #eafaf9;
+      padding: 1em 1.5em;
+      border-left: 5px solid #007c7c;
+      margin-top: 1.5em;
+      border-radius: 5px;
+    }
+
+    .footer-quote {
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      margin-top: 3em;
+      padding-bottom: 2em;
+    }
+
+    .footer-quote span {
+      font-size: 1.2em;
     }
   </style>
 </head>
@@ -57,21 +126,60 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section>
+  <header>
     <h1>🧪 Neuro-Physio Dashboard</h1>
+    <p>An interactive web app to visualize biosignals, detect stress, and explore PPG + EEG features — all in one place.</p>
+  </header>
+
+  <div class="content">
+
+    <div class="quote">
+      “I wanted to create a tool that could help researchers and clinicians visualize physiological data in a clean, interactive way. So I built one.”
+    </div>
+
+    <h2>🧠 What It Does</h2>
     <p>
-      I developed an interactive dashboard using <strong>Streamlit</strong> to visualize and classify biomedical signals such as PPG and EEG. The tool allows users to upload raw signals, run real-time peak detection, and apply machine learning models for stress prediction.
+      The Neuro-Physio Dashboard is a Streamlit-based application that displays and analyzes physiological signals like PPG and EEG.
+      It includes:
+      <ul>
+        <li>📊 Real-time signal plotting</li>
+        <li>🔍 PPG peak detection</li>
+        <li>📈 Stress classification using HRV & machine learning</li>
+        <li>🧬 EEG activity simulation and visualization</li>
+        <li>📂 Upload-your-own-signal & export reports</li>
+      </ul>
     </p>
 
+    <h2>📸 App Previews</h2>
+    <img src="assets/ppg_viewer (1).png" alt="PPG Signal Viewer">
+    <div class="caption">PPG signal plotted in the viewer module</div>
+
+    <img src="assets/peaks (1).png" alt="PPG Peak Detection">
+    <div class="caption">PPG signal with peak detection overlay (red markers)</div>
+
+    <h2>📽️ Full Demo</h2>
+    <p>Click below to watch the complete app in action:</p>
+    <img src="assets/neuro_physio_full_demo.gif" alt="Dashboard Demo">
+    <div class="caption">🧪 Demo of full dashboard: signal viewer, peaks, classifier & EEG</div>
+
+    <h2>💡 Why I Built This</h2>
     <p>
-      The dashboard integrates signal filtering, HRV feature extraction, and dynamic plotting for visual interpretation. It offers a practical tool for real-time physiological monitoring and educational demos in biomedical engineering.
+      I wanted to bring together my knowledge of signal processing, biomedical engineering, and data visualization. By building a real app, I was able to:
+      <ul>
+        <li>🛠 Practice full-stack development with Streamlit</li>
+        <li>💡 Learn how to manage user input, tabs, and plots</li>
+        <li>⚙️ Apply PPG + EEG techniques in a user-friendly way</li>
+      </ul>
     </p>
 
-    <img src="assets/neuro_physio_full_demo.gif" alt="Neuro-Physio Dashboard Demo">
+    <a class="button" href="https://github.com/Reem-Aboutaleb/neuro-physio-dashboard" target="_blank">🔗 View App on GitHub</a>
 
-    <a class="button" href="https://github.com/Reem-Aboutaleb/neuro-physio-dashboard" target="_blank">🔗 View GitHub Repo</a>
-    <a class="button" href="https://neuro-physio-dashboard-dkpzskqkcxnbccr94b5gxf.streamlit.app" target="_blank">🚀 Live Demo</a>
-  </section>
+    <div class="footer-quote">
+      <span>🧪💓✨</span><br>
+      Built with Streamlit, love, and curiosity.
+    </div>
+
+  </div>
 
 </body>
 </html>
