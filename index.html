@@ -18,6 +18,8 @@
       background: #7a62d3;
       padding: 1em;
       text-align: center;
+      z-index: 2;
+      position: relative;
     }
     nav a {
       color: white;
@@ -30,6 +32,8 @@
       text-align: center;
       padding: 5em 2em 3em;
       background: linear-gradient(to bottom right, #f6f0ff, #e7faff);
+      z-index: 2;
+      position: relative;
     }
     .hero h1 {
       font-size: 3em;
@@ -65,10 +69,50 @@
       font-size: 14px;
       padding: 2em;
       color: #999;
+      z-index: 2;
+      position: relative;
+    }
+
+    /* 🌟 Sparkle Magic */
+    .sparkle {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .sparkle span {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: #d3bdf0;
+      border-radius: 50%;
+      animation: floatSparkle 8s infinite ease-in-out;
+      opacity: 0.7;
+    }
+
+    @keyframes floatSparkle {
+      0% { transform: translateY(100vh) scale(1); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
     }
   </style>
 </head>
 <body>
+
+  <!-- ✨ Sparkles -->
+  <div class="sparkle">
+    <span style="left:10%; animation-delay: 0s;"></span>
+    <span style="left:25%; animation-delay: 2s;"></span>
+    <span style="left:40%; animation-delay: 4s;"></span>
+    <span style="left:55%; animation-delay: 1s;"></span>
+    <span style="left:70%; animation-delay: 3s;"></span>
+    <span style="left:85%; animation-delay: 5s;"></span>
+  </div>
 
   <nav>
     <a href="index.html">Home</a>
@@ -96,5 +140,6 @@
 
 </body>
 </html>
+
 
 
