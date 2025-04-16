@@ -1,58 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me | Reem Aboutaleb</title>
   <style>
     body {
-      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      background: #fdfdfd;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fef9ff, #e6faff);
+      color: #2c3e50;
     }
     nav {
-      background: #333;
+      background: #7a62d3;
       padding: 1em;
       text-align: center;
     }
     nav a {
       color: white;
-      margin: 0 1em;
+      margin: 0 1.5em;
       text-decoration: none;
       font-weight: bold;
     }
-    section {
-      padding: 3em;
+    header {
+      text-align: center;
+      padding: 3em 2em;
+      background: #ede7f6;
+    }
+    header h1 {
+      font-size: 2.8em;
+      color: #6a1b9a;
+    }
+    header p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 1em auto;
+      color: #444;
+    }
+    .content {
       max-width: 900px;
       margin: auto;
+      padding: 2em;
     }
-    h1 {
-      color: #2c3e50;
+    .content h2 {
+      color: #6a1b9a;
+      margin-top: 2em;
+    }
+    .content p, .content ul {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      margin-top: 1em;
+    }
+    .skill {
+      background: #f3e5f5;
+      color: #4a148c;
+      padding: 0.6em 1em;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 2em;
+      background: #6a1b9a;
+      color: white;
+      padding: 0.8em 1.6em;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background: #4a0072;
+    }
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: #999;
+      margin-top: 4em;
+      padding-bottom: 2em;
     }
   </style>
 </head>
 <body>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section>
-    <h1>👩‍🔬 About Me</h1>
+  <header>
+    <h1>Hi, I’m Reem Aboutaleb 👩‍🔬</h1>
+    <p>Biomedical Engineering Master's Student | Signal Processing Enthusiast | Data-Driven Creator with a Heart</p>
+  </header>
+
+  <div class="content">
+    <h2>✨ Who I Am</h2>
     <p>
-      Hello! I'm <strong>Reem Aboutaleb</strong>, a Biomedical Engineering Master’s student at <strong>NYU Tandon</strong> with a Bachelor’s degree in Biology and a certification in <strong>Google Data Analytics</strong>.
+      I'm a passionate biomedical engineering student at NYU Tandon with a background in biology. I’ve always been fascinated by the intersection between the human body, healthcare, and technology. From brainwaves to heart signals, I love turning raw physiological data into meaningful insights.
     </p>
+
+    <h2>🎓 Education</h2>
+    <ul>
+      <li><strong>Master of Science</strong> in Biomedical Engineering – NYU Tandon School of Engineering</li>
+      <li><strong>Bachelor of Science</strong> in Biology – NJCU</li>
+    </ul>
+
+    <h2>🧠 What I’m Passionate About</h2>
     <p>
-      My interests lie at the intersection of biology, healthcare, and technology. I focus on applying data science and biomedical signal processing to solve real-world problems—ranging from stress detection to EEG analysis and drug delivery simulation.
+      I care deeply about applying biomedical tools to real-world problems — whether it’s detecting stress through biosignals, simulating drug delivery, or exploring neurodegeneration in Alzheimer’s disease. My goal is to build tools that make health care more precise, personal, and effective.
     </p>
+
+    <h2>🛠 Skills & Tools</h2>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">Streamlit</div>
+      <div class="skill">Signal Processing</div>
+      <div class="skill">Machine Learning</div>
+      <div class="skill">MNE / NeuroKit2</div>
+      <div class="skill">ELISA / PCR</div>
+      <div class="skill">Matplotlib / Seaborn</div>
+      <div class="skill">GitHub</div>
+    </div>
+
+    <h2>💫 Outside the Lab</h2>
     <p>
-      With hands-on experience in Python, machine learning, and physiological data analysis, I aim to build solutions that improve healthcare outcomes and support clinical decision-making.
+      When I’m not coding or analyzing signals, you’ll find me enjoying pastries 🧁, cheering on my peers, or turning ordinary projects into something that sparkles ✨. I believe science is strongest when it's creative, collaborative, and kind.
     </p>
-    <p>
-      Whether I’m building an interactive dashboard for PPG analysis or simulating drug release models, my goal is always the same: to bring science and engineering together in meaningful, impactful ways.
-    </p>
-  </section>
+
+    <a class="button" href="assets/Reem_Aboutaleb_Resume.pdf" download>📄 Download My Resume</a>
+  </div>
+
+  <div class="footer">
+    Made with 💜 and Streamlit sparkles ✨
+  </div>
+
 </body>
 </html>
+
