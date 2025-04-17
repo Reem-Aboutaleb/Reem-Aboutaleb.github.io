@@ -4,58 +4,120 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me | Reem Aboutaleb</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Inter', sans-serif;
       background: linear-gradient(to bottom right, #fef9ff, #e6faff);
       color: #2c3e50;
+      overflow-x: hidden;
     }
+
     nav {
       background: #7a62d3;
       padding: 1em;
       text-align: center;
+      position: relative;
+      z-index: 10;
     }
+
     nav a {
       color: white;
       margin: 0 1.5em;
       text-decoration: none;
       font-weight: bold;
     }
+
+    .sparkle {
+      position: absolute;
+      font-size: 1.25rem;
+      opacity: 0.5;
+      animation: sparkleRise 9s linear infinite;
+    }
+
+    @keyframes sparkleRise {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.4;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
     header {
       text-align: center;
       padding: 3em 2em;
       background: #ede7f6;
+      position: relative;
+      z-index: 1;
     }
+
     header h1 {
       font-size: 2.8em;
       color: #6a1b9a;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out 0.3s forwards;
     }
+
+    .emoji {
+      display: inline-block;
+      animation: float 3s ease-in-out infinite;
+      margin-left: 0.3em;
+    }
+
     header p {
       font-size: 1.2em;
       max-width: 700px;
       margin: 1em auto;
       color: #444;
     }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
     .content {
       max-width: 900px;
       margin: auto;
       padding: 2em;
     }
+
     .content h2 {
       color: #6a1b9a;
       margin-top: 2em;
     }
+
     .content p, .content ul {
       font-size: 16px;
       line-height: 1.6;
     }
+
     .skills {
       display: flex;
       flex-wrap: wrap;
       gap: 1em;
       margin-top: 1em;
     }
+
     .skill {
       background: #f3e5f5;
       color: #4a148c;
@@ -63,20 +125,7 @@
       border-radius: 20px;
       font-weight: bold;
     }
-    .button {
-      display: inline-block;
-      margin-top: 2em;
-      background: #6a1b9a;
-      color: white;
-      padding: 0.8em 1.6em;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .button:hover {
-      background: #4a0072;
-    }
+
     .footer {
       text-align: center;
       font-size: 14px;
@@ -84,22 +133,44 @@
       margin-top: 4em;
       padding-bottom: 2em;
     }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      header p {
+        font-size: 1em;
+        padding: 0 1em;
+      }
+      .content {
+        padding: 1.5em;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Sparkles -->
+  <span class="sparkle" style="left: 10%; top: 100%;">✨</span>
+  <span class="sparkle" style="left: 35%; top: 98%; animation-delay: 1.5s;">💫</span>
+  <span class="sparkle" style="left: 65%; top: 97%; animation-delay: 2.8s;">🌟</span>
+  <span class="sparkle" style="left: 85%; top: 100%; animation-delay: 1.2s;">✨</span>
+
+  <!-- Navbar -->
   <nav>
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
     <a href="certificates.html">Certificates</a>
-    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
   </nav>
 
+  <!-- Header -->
   <header>
-    <h1>Hi, I’m Reem Aboutaleb 👩‍🔬</h1>
+    <h1>Hi, I’m Reem Aboutaleb <span class="emoji">👩‍🔬</span></h1>
     <p>M.S. Biomedical Engineering | AI • Signal Processing • Data Analytics • Research | Passionate About Tech-Driven Healthcare</p>
   </header>
 
+  <!-- Content -->
   <div class="content">
     <h2>✨ Who I Am</h2>
     <p>
@@ -139,15 +210,16 @@
     <p>
       I love adding creativity to everything I build — from pastel dashboards to sparkling data visuals. I’m a big fan of pastries 🧁, kindness, clean design, and turning my curiosity into real tools that help others.
     </p>
-
-    <a class="button" href="Reem_Aboutaleb_Resume.pdf" download>📄 Download My Resume</a>
   </div>
 
+  <!-- Footer -->
   <div class="footer">
     Made with 💜 and Streamlit sparkles ✨
   </div>
 
 </body>
 </html>
+
+
 
 
