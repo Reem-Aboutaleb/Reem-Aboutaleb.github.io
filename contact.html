@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me | Reem Aboutaleb</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #fef9ff, #e0f7fa);
+      color: #2c3e50;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background: #7a62d3;
+      padding: 1em;
+      text-align: center;
+      position: relative;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1.5em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .sparkle {
+      position: absolute;
+      font-size: 1.25rem;
+      opacity: 0.5;
+      animation: sparkleRise 9s linear infinite;
+    }
+
+    @keyframes sparkleRise {
+      0% { transform: translateY(0) scale(1); opacity: 0.4; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
+    }
+
+    header {
+      text-align: center;
+      padding: 3em 2em 1em;
+      background: #ede7f6;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #6a1b9a;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: 2em auto;
+      text-align: center;
+      background: white;
+      padding: 2em;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .email, .linkedin {
+      margin-top: 1.5em;
+    }
+
+    .email a, .linkedin a {
+      font-size: 1rem;
+      text-decoration: none;
+      color: #6a1b9a;
+      font-weight: 600;
+      background: #f3e5f5;
+      padding: 0.6em 1.2em;
+      border-radius: 30px;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .email a:hover, .linkedin a:hover {
+      background: #e0cdee;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: #999;
+      margin-top: 4em;
+      padding-bottom: 2em;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sparkles -->
+  <span class="sparkle" style="left: 10%; top: 100%;">✨</span>
+  <span class="sparkle" style="left: 30%; top: 98%; animation-delay: 1s;">💫</span>
+  <span class="sparkle" style="left: 65%; top: 97%; animation-delay: 2s;">🌟</span>
+  <span class="sparkle" style="left: 85%; top: 99%; animation-delay: 1.4s;">✨</span>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="certificates.html">Certificates</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>📬 Let’s Connect!</h1>
+  </header>
+
+  <!-- Contact Info -->
+  <div class="content">
+    <p>I'd love to hear from you — whether it's research, collaboration, or just to say hi!</p>
+
+    <div class="email">
+      <a href="mailto:Reemwalid222@gmail.com">📧 Reemwalid222@gmail.com</a>
+    </div>
+
+    <div class="linkedin">
+      <a href="https://www.linkedin.com/in/reem-aboutaleb-65314225b" target="_blank">💼 View LinkedIn Profile</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Made with 💜 and kindness — Reem Aboutaleb ✨
+  </div>
+
+</body>
+</html>
