@@ -3,123 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Certificates | Reem Aboutaleb</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #f9f7ff, #f0faff);
-      color: #2c3e50;
-    }
-    nav {
-      background: #7a62d3;
-      padding: 1em;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 1.5em;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    header {
-      text-align: center;
-      padding: 3em 2em 1em;
-    }
-    header h1 {
-      font-size: 2.4em;
-      color: #6a1b9a;
-    }
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2em;
-      padding: 2em;
-    }
-    .card {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
-      width: 280px;
-      padding: 1.5em;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card h3 {
-      color: #6a1b9a;
-      margin-bottom: 0.4em;
-    }
-    .card p {
-      font-size: 0.95em;
-      color: #555;
-    }
-    .card a {
-      display: inline-block;
-      margin-top: 1em;
-      padding: 0.5em 1.2em;
-      background: #7a62d3;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .card a:hover {
-      background: #5c43b8;
-    }
-    footer {
-      text-align: center;
-      font-size: 14px;
-      padding: 2em;
-      color: #999;
-    }
-  </style>
+  <title>My Certificates</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 font-[Inter] text-gray-800">
+  <div class="max-w-5xl mx-auto p-6">
+    <h1 class="text-4xl font-bold mb-8 text-center">📜 My Certificates</h1>
+    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2">
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="projects.html">Projects</a>
-    <a href="certificates.html">Certificates</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+      <!-- Certificate 1: Google Advanced Data Analytics -->
+      <div class="bg-white shadow-lg rounded-2xl overflow-hidden">
+        <iframe src="assets/Google%20Advanced%20Data%20Analytics.pdf" class="w-full h-[400px]" title="Google Advanced Data Analytics"></iframe>
+        <div class="p-4">
+          <h2 class="font-semibold text-lg">Google Advanced Data Analytics</h2>
+        </div>
+      </div>
 
-  <header>
-    <h1>🏅 My Certifications</h1>
-    <p>A showcase of the certifications I've earned to strengthen my knowledge in data, AI, healthcare, and technology.</p>
-  </header>
+      <!-- Certificate 2: Google AI Essentials -->
+      <div class="bg-white shadow-lg rounded-2xl overflow-hidden">
+        <iframe src="assets/Google%20AI%20Essentials.pdf" class="w-full h-[400px]" title="Google AI Essentials"></iframe>
+        <div class="p-4">
+          <h2 class="font-semibold text-lg">Google AI Essentials</h2>
+        </div>
+      </div>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Google Data Analytics</h3>
-      <p>Credentialed by Google, this program enhanced my data cleaning, analysis, visualization, and dashboard skills in real-world projects.</p>
-    </div>
-    <div class="card">
-      <h3>Google AI Essentials</h3>
-      <p>Explored responsible AI, foundational concepts, and how AI can be used to solve real-world problems ethically and effectively.</p>
-    </div>
-    <div class="card">
-      <h3>Microsoft System Administration</h3>
-      <p>Learned essential system administration tasks and how to manage secure computing environments using Microsoft technologies.</p>
-    </div>
-    <div class="card">
-      <h3>Advanced NLP with Python</h3>
-      <p>Dived deep into natural language processing techniques, model pipelines, and applying text-based ML to biomedical and technical problems.</p>
-    </div>
-    <div class="card">
-      <h3>BLS Provider (CPR & First Aid)</h3>
-      <p>Certified in Basic Life Support by the American Heart Association. Includes adult/infant CPR, AED use, and emergency response skills.</p>
+      <!-- Certificate 3: Advanced NLP with Python -->
+      <div class="bg-white shadow-lg rounded-2xl overflow-hidden">
+        <img src="assets/NLP%20with%20Python%20for%20Machine%20learning.jpg" class="w-full h-auto" alt="Advanced NLP with Python">
+        <div class="p-4">
+          <h2 class="font-semibold text-lg">Advanced NLP with Python for Machine Learning</h2>
+        </div>
+      </div>
+
+      <!-- Certificate 4: National Society of Leadership & Success -->
+      <div class="bg-white shadow-lg rounded-2xl overflow-hidden">
+        <img src="assets/NSLS%20Certificate.jpg" class="w-full h-auto" alt="NSLS Certificate">
+        <div class="p-4">
+          <h2 class="font-semibold text-lg">National Society of Leadership & Success</h2>
+        </div>
+      </div>
+
+      <!-- Certificate 5: CPR / BLS Provider -->
+      <div class="bg-white shadow-lg rounded-2xl overflow-hidden">
+        <img src="assets/BLS%20certificate.jpg" class="w-full h-auto" alt="BLS Certificate">
+        <div class="p-4">
+          <h2 class="font-semibold text-lg">CPR / BLS Provider Certification</h2>
+        </div>
+      </div>
+
+      <!-- Certificate 6: AI in Healthcare by Stanford Online -->
+      <div class="bg-white shadow-lg rounded-2xl overflow-hidden">
+        <img src="assets/AI%20in%20healthcare.jpg" class="w-full h-auto" alt="AI in Healthcare Certificate">
+        <div class="p-4">
+          <h2 class="font-semibold text-lg">AI in Healthcare - Stanford Online</h2>
+        </div>
+      </div>
+
     </div>
   </div>
-
-  <footer>
-    Built with care by Reem 💜 | Powered by GitHub Pages ✨
-  </footer>
-
 </body>
 </html>
