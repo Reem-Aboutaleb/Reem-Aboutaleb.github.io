@@ -2,167 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reem Aboutaleb</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reem's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #f6f0ff;
-      color: #333;
-      overflow-x: hidden;
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
     }
 
-    nav {
-      background-color: #7e57c2;
-      padding: 1em 0;
-      text-align: center;
-      z-index: 10;
-      position: relative;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 1em;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 4em 1em 2em;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #6a1b9a;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease-out 0.3s forwards;
-    }
-
-    .emoji {
-      display: inline-block;
-      margin-left: 0.5em;
+    .floaty {
       animation: float 3s ease-in-out infinite;
     }
 
-    .tagline {
-      font-size: 1rem;
-      max-width: 600px;
-      margin: 1em auto 0;
-      line-height: 1.6;
-      color: #444;
-      text-align: center;
-      padding: 0 1em;
-    }
-
-    .pdf-button {
-      margin-top: 2em;
-      display: inline-block;
-      padding: 0.7em 1.5em;
-      background: white;
-      color: #6a1b9a;
-      border: 2px solid #c39be2;
-      border-radius: 30px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 0 12px rgba(122, 55, 170, 0.15);
-      transition: all 0.3s ease;
-      position: relative;
-      z-index: 1;
-    }
-
-    .pdf-button:hover {
-      background: #f3e8ff;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 20px rgba(122, 55, 170, 0.2);
-    }
-
-    /* Sparkles */
     .sparkle {
       position: absolute;
       font-size: 1.25rem;
       opacity: 0.5;
-      animation: sparkleRise 9s linear infinite;
+      animation: sparkleAnim 9s linear infinite;
     }
 
-    @keyframes sparkleRise {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.4;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-100vh) scale(1.2);
-        opacity: 0;
-      }
+    @keyframes sparkleAnim {
+      0% { transform: translateY(0) scale(1); opacity: 0.4; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
     }
 
-    .fadeIn {
+    .fade-in {
       opacity: 0;
       transform: translateY(20px);
-      animation: fadeInUp 1s ease forwards;
-      animation-delay: 0.3s;
+      transition: all 0.8s ease-out;
     }
 
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 1.8rem;
-      }
-      .tagline {
-        font-size: 0.95rem;
-      }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
-<body>
+<body class="bg-gradient-to-br from-pink-50 to-indigo-100 min-h-screen font-[Inter] text-gray-800 overflow-x-hidden relative">
 
-  <!-- Sparkles Floating -->
-  <span class="sparkle" style="left: 10%; top: 100%;">✨</span>
-  <span class="sparkle" style="left: 30%; top: 98%; animation-delay: 1.2s;">💫</span>
-  <span class="sparkle" style="left: 55%; top: 99%; animation-delay: 2s;">🌟</span>
-  <span class="sparkle" style="left: 80%; top: 100%; animation-delay: 0.8s;">✨</span>
+  <!-- Sparkles -->
+  <span class="sparkle" style="left: 12%; top: 100%;">✨</span>
+  <span class="sparkle" style="left: 32%; top: 95%; animation-delay: 2s;">🌟</span>
+  <span class="sparkle" style="left: 68%; top: 97%; animation-delay: 3.5s;">💫</span>
+  <span class="sparkle" style="left: 88%; top: 98%; animation-delay: 1.5s;">✨</span>
 
   <!-- Navbar -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="certificates.html">Certificates</a>
-    <a href="about.html">About</a>
+  <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold text-indigo-600">Reem's Portfolio</h1>
+      <ul class="flex gap-6 text-sm font-semibold text-gray-700">
+        <li><a href="index.html" class="text-indigo-600 underline">🏠 Home</a></li>
+        <li><a href="projects.html" class="hover:text-indigo-500">💼 Projects</a></li>
+        <li><a href="certificates.html" class="hover:text-indigo-500">📜 Certificates</a></li>
+        <li><a href="about.html" class="hover:text-indigo-500">👩‍💻 About Me</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>I’m Reem Aboutaleb <span class="emoji">👩‍🔬</span></h1>
-    <p class="tagline">
-      Biomedical Engineering • AI • Signal Processing • Data Analytics • Research<br />
-      Passionate About Tech-Driven Healthcare
+  <!-- Welcome Message -->
+  <section class="text-center mt-10 px-4 fade-in">
+    <p class="text-lg sm:text-xl font-semibold text-indigo-700 bg-white inline-block px-6 py-3 rounded-xl shadow-lg floaty">
+      ✨ Welcome to my world of Biomedical Magic — where innovation meets heart 🧬💖
     </p>
-
-    <a class="pdf-button" href="Reem_Project_Portfolio.pdf" target="_blank">📄 Download Project Portfolio (PDF)</a>
   </section>
+
+  <!-- Hero Section -->
+  <section class="max-w-3xl mx-auto mt-16 px-6 text-center relative z-10 fade-in">
+    <div class="bg-white shadow-xl rounded-2xl p-8">
+      <div class="w-32 h-32 mx-auto rounded-full bg-indigo-100 flex items-center justify-center text-4xl shadow-md mb-2">🧬</div>
+      <h2 class="text-xl font-semibold text-indigo-700 mb-4">Reem Aboutaleb</h2>
+      <p class="text-sm text-gray-600 mb-4">
+        Biomedical Engineering Master's Student at NYU Tandon. I’m passionate about the intersection of healthcare and technology, and love building creative, data-driven solutions that make a real impact 💡✨
+      </p>
+      <div class="flex flex-wrap justify-center gap-2 text-xs font-medium">
+        <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">📊 Data Analytics</span>
+        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">🧠 Machine Learning</span>
+        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">💉 Biomedical Engineering</span>
+        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full">📡 Signal Processing</span>
+        <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full">🧬 Biology Research</span>
+      </div>
+
+      <!-- Resume Button -->
+      <div class="mt-6 fade-in">
+        <a href="assets/Reem_Aboutaleb_Resume.pdf" download class="bg-indigo-600 text-white px-6 py-2 rounded-full shadow hover:bg-indigo-700 transition floaty inline-block">
+          📥 Download My Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me Section -->
+  <section class="mt-20 mb-20 text-center fade-in">
+    <h3 class="text-xl font-semibold text-indigo-700 mb-2">📬 Let’s Connect</h3>
+    <p class="text-sm text-gray-600 mb-4">I’d love to connect, collaborate, or chat about new opportunities!</p>
+    <div class="flex flex-wrap justify-center gap-6 text-sm font-medium">
+      <a href="mailto:Reemwalid222@gmail.com" class="text-indigo-600 hover:underline">📧 Reemwalid222@gmail.com</a>
+      <a href="https://github.com/Reem-Aboutaleb" target="_blank" class="text-indigo-600 hover:underline">💻 GitHub</a>
+      <a href="https://www.linkedin.com/in/reem-aboutaleb-65314225b" target="_blank" class="text-indigo-600 hover:underline">🔗 LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 fade-in">
+    © 2025 Reem Aboutaleb. All rights reserved.
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(fade => observer.observe(fade));
+  </script>
 
 </body>
 </html>
+
 
 
 
