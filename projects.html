@@ -167,7 +167,6 @@
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
     <a href="certificates.html">Certificates</a>
-    <a href="contact.html">Contact</a>
     <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
   </nav>
 
@@ -216,7 +215,6 @@
       localStorage.setItem('theme', newTheme);
     }
 
-    // Load saved theme on page load
     document.addEventListener("DOMContentLoaded", () => {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme) {
