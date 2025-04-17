@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me | Reem's Portfolio</title>
+  <title>Reem's Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -11,19 +11,34 @@
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-6px); }
     }
+
     .floaty {
       animation: float 3s ease-in-out infinite;
     }
+
     .sparkle {
       position: absolute;
       font-size: 1.25rem;
       opacity: 0.5;
       animation: sparkleAnim 9s linear infinite;
     }
+
     @keyframes sparkleAnim {
       0% { transform: translateY(0) scale(1); opacity: 0.4; }
       50% { opacity: 1; }
       100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
+    }
+
+    /* Scroll Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -49,14 +64,14 @@
   </nav>
 
   <!-- Welcome Message -->
-  <section class="text-center mt-10 px-4">
+  <section class="text-center mt-10 px-4 fade-in">
     <p class="text-base sm:text-lg font-medium text-indigo-600 bg-white inline-block px-5 py-2 rounded-xl shadow floaty">
       ✨ Welcome to my world of Biomedical Magic 🧬
     </p>
   </section>
 
   <!-- About Section -->
-  <section class="max-w-3xl mx-auto mt-16 px-6 text-center relative z-10">
+  <section class="max-w-3xl mx-auto mt-16 px-6 text-center relative z-10 fade-in">
     <div class="bg-white shadow-xl rounded-2xl p-8">
       <!-- Emoji Avatar -->
       <div class="w-32 h-32 mx-auto rounded-full bg-indigo-100 flex items-center justify-center text-4xl shadow-md mb-2">🧬</div>
@@ -75,9 +90,23 @@
   </section>
 
   <!-- Footer -->
-  <footer class="mt-32 text-center text-sm text-gray-500">
+  <footer class="mt-32 text-center text-sm text-gray-500 fade-in">
     © 2025 Reem Aboutaleb. All rights reserved.
   </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(fade => observer.observe(fade));
+  </script>
 
 </body>
 </html>
