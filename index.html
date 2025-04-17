@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Me | Reem's Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -11,18 +11,15 @@
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-6px); }
     }
-
     .floaty {
       animation: float 3s ease-in-out infinite;
     }
-
     .sparkle {
       position: absolute;
       font-size: 1.25rem;
       opacity: 0.5;
       animation: sparkleAnim 9s linear infinite;
     }
-
     @keyframes sparkleAnim {
       0% { transform: translateY(0) scale(1); opacity: 0.4; }
       50% { opacity: 1; }
@@ -43,18 +40,25 @@
     <div class="max-w-5xl mx-auto flex justify-between items-center">
       <h1 class="text-xl font-bold text-indigo-600">Reem's Portfolio</h1>
       <ul class="flex gap-6 text-sm font-semibold text-gray-700">
-        <li><a href="index.html" class="hover:text-indigo-500">🏠 Home</a></li>
+        <li><a href="index.html" class="text-indigo-600 underline">🏠 Home</a></li>
         <li><a href="projects.html" class="hover:text-indigo-500">💼 Projects</a></li>
         <li><a href="certificates.html" class="hover:text-indigo-500">📜 Certificates</a></li>
-        <li><a href="about.html" class="text-indigo-600 underline">👩‍💻 About Me</a></li>
+        <li><a href="about.html" class="hover:text-indigo-500">👩‍💻 About Me</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- Welcome Message -->
+  <section class="text-center mt-10 px-4">
+    <p class="text-base sm:text-lg font-medium text-indigo-600 bg-white inline-block px-5 py-2 rounded-xl shadow floaty">
+      ✨ Welcome to my world of Biomedical Magic 🧬
+    </p>
+  </section>
+
   <!-- About Section -->
-  <section class="max-w-3xl mx-auto mt-20 px-6 text-center relative z-10">
+  <section class="max-w-3xl mx-auto mt-16 px-6 text-center relative z-10">
     <div class="bg-white shadow-xl rounded-2xl p-8">
-      <!-- Replace image with emoji avatar -->
+      <!-- Emoji Avatar -->
       <div class="w-32 h-32 mx-auto rounded-full bg-indigo-100 flex items-center justify-center text-4xl shadow-md mb-2">🧬</div>
       <h2 class="text-xl font-semibold text-indigo-700 mb-4">Reem Aboutaleb</h2>
       <p class="text-sm text-gray-600 mb-4">
@@ -77,6 +81,7 @@
 
 </body>
 </html>
+
 
 
 
