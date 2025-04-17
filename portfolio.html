@@ -14,10 +14,33 @@
     h1 {
       text-align: center;
       font-size: 28px;
-      margin-bottom: 10px;
+      margin-bottom: 4px;
     }
 
-    p.subtitle {
+    .contact {
+      text-align: center;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .contact a {
+      color: #007acc;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .qr {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .qr img {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #eee;
+    }
+
+    .subtitle {
       text-align: center;
       font-style: italic;
       font-size: 14px;
@@ -62,7 +85,20 @@
 <body>
 
   <h1>Reem Aboutaleb — Project Portfolio 💼</h1>
-  <p class="subtitle">A selection of biomedical, AI, and signal processing projects.</p>
+
+  <div class="contact">
+    <a href="mailto:Reemwalid222@gmail.com">📧 Reemwalid222@gmail.com</a> |
+    <a href="https://www.linkedin.com/in/reem-aboutaleb-65314225b" target="_blank">🔗 LinkedIn</a>
+  </div>
+
+  <div class="qr">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://reem-aboutaleb.github.io" alt="QR to homepage" />
+    <div style="font-size: 12px; margin-top: 6px;">Scan to visit homepage</div>
+  </div>
+
+  <p class="subtitle">
+    A selection of biomedical, AI, and signal processing projects.
+  </p>
 
   <div class="project">
     <h2>🧠 Stress Detection</h2>
@@ -98,3 +134,4 @@
 
 </body>
 </html>
+
