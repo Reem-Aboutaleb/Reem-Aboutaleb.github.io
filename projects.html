@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects | Reem Aboutaleb</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg-color: #fef9ff;
@@ -31,8 +32,7 @@
       margin: 0;
       background: var(--bg-color);
       color: var(--text-color);
-      font-family: 'Segoe UI', sans-serif;
-      transition: background 0.3s ease, color 0.3s ease;
+      font-family: 'Inter', sans-serif;
       overflow-x: hidden;
     }
 
@@ -69,6 +69,14 @@
       text-align: center;
       padding: 2em 1em 0.5em;
       color: var(--text-color);
+      font-size: 2.4em;
+      position: relative;
+      animation: floaty 3s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
     }
 
     .intro {
@@ -93,9 +101,9 @@
       border-radius: 14px;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
       width: 300px;
-      padding: 1.8em 1.5em;
+      padding: 1.5em;
       text-align: center;
-      transition: transform 0.2s ease, background 0.3s ease;
+      transition: transform 0.2s ease;
     }
 
     .card:hover {
@@ -103,13 +111,12 @@
     }
 
     .emoji-banner {
-      font-size: 1.3em;
-      padding: 1em;
+      font-size: 1.2em;
+      padding: 0.8em;
       background: var(--emoji-bg);
       border-radius: 10px;
       font-weight: bold;
       margin-bottom: 1em;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
       transition: all 0.3s ease;
     }
 
@@ -133,32 +140,29 @@
       text-decoration: none;
       border-radius: 30px;
       font-weight: bold;
-      position: relative;
       transition: all 0.3s ease;
-    }
-
-    .card a::after {
-      content: "✨";
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      opacity: 0;
-      transition: opacity 0.3s;
     }
 
     .card a:hover {
       background: var(--button-hover-bg);
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
     }
 
-    .card a:hover::after {
-      opacity: 1;
-      animation: sparkle 1s ease infinite;
+    .tags {
+      margin-top: 0.8em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em;
+      justify-content: center;
     }
 
-    @keyframes sparkle {
-      0%, 100% { transform: rotate(0deg); }
-      50% { transform: rotate(20deg); }
+    .tag {
+      font-size: 11px;
+      padding: 0.3em 0.8em;
+      border-radius: 999px;
+      background: #eee6fa;
+      color: #6a1b9a;
+      font-weight: 600;
     }
 
     .sparkle {
@@ -195,6 +199,7 @@
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
     <a href="certificates.html">Certificates</a>
+    <a href="contact.html">Contact</a>
     <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
   </nav>
 
@@ -206,38 +211,69 @@
 
   <!-- Projects Grid -->
   <div class="grid">
+
     <div class="card">
       <div class="emoji-banner">🧠 Stress Detection</div>
       <p>Classifying stress using PPG + EDA signals and HRV features from the WESAD dataset.</p>
+      <div class="tags">
+        <div class="tag">Python</div>
+        <div class="tag">PPG</div>
+        <div class="tag">HRV</div>
+        <div class="tag">ML</div>
+      </div>
       <a href="project1.html">View Project</a>
     </div>
 
     <div class="card">
       <div class="emoji-banner">💓 ECG Signal Analysis</div>
       <p>Analyzing ECG waveforms and visualizing heart rate variability and R-R intervals.</p>
+      <div class="tags">
+        <div class="tag">ECG</div>
+        <div class="tag">Signal Processing</div>
+        <div class="tag">Python</div>
+        <div class="tag">Visualization</div>
+      </div>
       <a href="project2.html">View Project</a>
     </div>
 
     <div class="card">
       <div class="emoji-banner">📊 EEG Alpha Detection</div>
       <p>Detecting alpha wave activity (8–13 Hz) from EEG signals using MNE-Python.</p>
+      <div class="tags">
+        <div class="tag">EEG</div>
+        <div class="tag">MNE</div>
+        <div class="tag">NeuroKit</div>
+        <div class="tag">Alpha Band</div>
+      </div>
       <a href="project3.html">View Project</a>
     </div>
 
     <div class="card">
       <div class="emoji-banner">💊 Drug Release Simulation</div>
       <p>Modeling and visualizing zero- and first-order release from drug delivery systems.</p>
+      <div class="tags">
+        <div class="tag">MATLAB</div>
+        <div class="tag">Pharmacokinetics</div>
+        <div class="tag">ODEs</div>
+      </div>
       <a href="project4.html">View Project</a>
     </div>
 
     <div class="card">
       <div class="emoji-banner">🧪 Neuro-Physio Dashboard</div>
       <p>Interactive Streamlit dashboard for biomedical signal viewing and stress classification.</p>
+      <div class="tags">
+        <div class="tag">Streamlit</div>
+        <div class="tag">EDA</div>
+        <div class="tag">Dashboard</div>
+        <div class="tag">ML</div>
+      </div>
       <a href="project5.html">View Project</a>
     </div>
+
   </div>
 
-  <!-- Theme Toggle Script -->
+  <!-- Theme Toggle -->
   <script>
     function toggleTheme() {
       const currentTheme = document.documentElement.getAttribute('data-theme');
