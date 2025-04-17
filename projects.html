@@ -33,6 +33,7 @@
       color: var(--text-color);
       font-family: 'Segoe UI', sans-serif;
       transition: background 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
     }
 
     nav {
@@ -76,7 +77,22 @@
       text-align: center;
       font-style: italic;
       font-size: 1.1em;
-      padding: 0 1em 2em;
+      padding: 0 1em 1.5em;
+    }
+
+    .pdf-btn {
+      display: inline-block;
+      background: #6a1b9a;
+      color: white;
+      text-decoration: none;
+      padding: 0.6em 1.4em;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .pdf-btn:hover {
+      background: #4a0072;
     }
 
     .grid {
@@ -112,10 +128,10 @@
       transition: all 0.3s ease;
     }
 
-    .emoji-banner:hover {
+    .card:hover .emoji-banner {
       transform: scale(1.05);
       background: var(--emoji-hover-bg);
-      box-shadow: 0 0 15px rgba(0, 122, 204, 0.3);
+      box-shadow: 0 0 15px rgba(0, 122, 204, 0.2);
     }
 
     .card p {
@@ -159,10 +175,37 @@
       0%, 100% { transform: rotate(0deg); }
       50% { transform: rotate(20deg); }
     }
+
+    .sparkle {
+      position: absolute;
+      font-size: 1.25rem;
+      opacity: 0.5;
+      animation: sparkleRise 9s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes sparkleRise {
+      0% { transform: translateY(0) scale(1); opacity: 0.4; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-100vh) scale(1.2); opacity: 0; }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 90%;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Sparkles -->
+  <span class="sparkle" style="left: 10%; top: 100%;">✨</span>
+  <span class="sparkle" style="left: 35%; top: 98%; animation-delay: 1.2s;">💫</span>
+  <span class="sparkle" style="left: 60%; top: 97%; animation-delay: 2s;">🌟</span>
+  <span class="sparkle" style="left: 85%; top: 99%; animation-delay: 0.8s;">✨</span>
+
+  <!-- Navbar -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
@@ -170,11 +213,16 @@
     <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
   </nav>
 
+  <!-- Header -->
   <h1>💼 My Projects</h1>
   <p class="intro">
     Every project below is a small piece of what I love most — blending biology, technology, and creativity to solve meaningful problems.
   </p>
+  <div style="text-align:center;">
+    <a href="Reem_Project_Portfolio.pdf" target="_blank" class="pdf-btn">📄 Download Project Portfolio (PDF)</a>
+  </div>
 
+  <!-- Projects Grid -->
   <div class="grid">
     <div class="card">
       <div class="emoji-banner">🧠 Stress Detection</div>
@@ -207,6 +255,7 @@
     </div>
   </div>
 
+  <!-- Theme Toggle Script -->
   <script>
     function toggleTheme() {
       const currentTheme = document.documentElement.getAttribute('data-theme');
